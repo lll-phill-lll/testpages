@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const descriptionElement = document.createElement('div');
         descriptionElement.className = 'description';
-        descriptionElement.innerHTML = `<p><strong>${achievementData.achievement}</strong></p><p>${achievementData.personName}</p>`;
+        descriptionElement.innerHTML = `<p><strong>${achievementData.achievement}</strong></p><p>${achievementData.personName}</p><p>${achievementData.description}</p>`;
 
         achievementElement.appendChild(imageElement);
         achievementElement.appendChild(textElement);
