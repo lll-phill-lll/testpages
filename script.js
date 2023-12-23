@@ -1,17 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     const achievementsContainer = document.getElementById('achievementsContainer');
 
-    // Загружаем данные из файла achievements.json
     fetch('achievements.json')
         .then(response => response.json())
         .then(data => {
-            // Отображаем достижения из файла
             data.forEach(achievementData => {
                 displayAchievement(achievementData);
             });
         });
 
-    // Функция для отображения достижения
     function displayAchievement(achievementData) {
         const achievementElement = document.createElement('div');
         achievementElement.className = 'achievement';
@@ -26,9 +23,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const personElement = document.createElement('p');
         personElement.innerText = achievementData.personName;
 
+        const descriptionElement = document.createElement('div');
+        descriptionElement.className = 'description';
+        descriptionElement.innerHTML = `<p><strong>${achievementData.achievement}</strong></p><p>${achievementData.personName}</p>`;
+
         achievementElement.appendChild(imageElement);
         achievementElement.appendChild(textElement);
         achievementElement.appendChild(personElement);
+        achievementElement.appendChild(descriptionElement);
 
         achievementsContainer.appendChild(achievementElement);
     }

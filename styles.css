@@ -1,46 +1,10 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-}
-
-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-#achievementsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+/* ... (ваш текущий CSS код) */
 
 .achievement {
+    position: relative;
     text-align: center;
     margin: 10px;
+    cursor: pointer;
 }
 
 .achievement img {
@@ -48,4 +12,26 @@ button:hover {
     width: 100px;
     height: 100px;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.achievement:hover img {
+    transform: scale(1.2);
+}
+
+.achievement .description {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.achievement:hover .description {
+    display: block;
 }
