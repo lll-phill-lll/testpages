@@ -17,9 +17,10 @@ h1 {
     text-align: center;
 }
 
-.achievementsContainer {
+#achievementsContainer {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .achievement {
@@ -27,6 +28,7 @@ h1 {
     text-align: center;
     margin: 10px;
     cursor: pointer;
+    width: 200px;
 }
 
 .achievement img {
