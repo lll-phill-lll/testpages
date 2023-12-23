@@ -17,6 +17,11 @@ h1 {
     text-align: center;
 }
 
+.achievementsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
 .achievement {
     position: relative;
     text-align: center;
