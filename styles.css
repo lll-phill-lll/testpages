@@ -60,3 +60,12 @@ h1 {
 .achievement:hover .description {
     display: block;
 }
+
+.achievement .description p {
+    margin: 0 0 10px;
+}
+
+.achievement .description strong {
+    display: block;
+    margin-bottom: 10px;
+}
