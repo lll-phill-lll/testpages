@@ -1,33 +1,35 @@
 document.addEventListener('DOMContentLoaded', function () {
     const achievementsContainer = document.getElementById('achievementsContainer');
-    const addAchievementBtn = document.getElementById('addAchievementBtn');
 
-    addAchievementBtn.addEventListener('click', function () {
-        const achievement = prompt('Введите текст достижения:');
-        const personName = prompt('Введите имя человека:');
-        const imageUrl = prompt('Введите URL круглой картинки:');
+    // Загружаем данные из файла achievements.json
+    fetch('achievements.json')
+        .then(response => response.json())
+        .then(data => {
+            // Отображаем достижения из файла
+            data.forEach(achievementData => {
+                displayAchievement(achievementData);
+            });
+        });
 
-        if (achievement && personName && imageUrl) {
-            const achievementElement = document.createElement('div');
-            achievementElement.className = 'achievement';
+    // Функция для отображения достижения
+    function displayAchievement(achievementData) {
+        const achievementElement = document.createElement('div');
+        achievementElement.className = 'achievement';
 
-            const imageElement = document.createElement('img');
-            imageElement.src = imageUrl;
-            imageElement.alt = personName;
+        const imageElement = document.createElement('img');
+        imageElement.src = achievementData.imageUrl;
+        imageElement.alt = achievementData.personName;
 
-            const textElement = document.createElement('p');
-            textElement.innerText = achievement;
+        const textElement = document.createElement('p');
+        textElement.innerText = achievementData.achievement;
 
-            const personElement = document.createElement('p');
-            personElement.innerText = personName;
+        const personElement = document.createElement('p');
+        personElement.innerText = achievementData.personName;
 
-            achievementElement.appendChild(imageElement);
-            achievementElement.appendChild(textElement);
-            achievementElement.appendChild(personElement);
+        achievementElement.appendChild(imageElement);
+        achievementElement.appendChild(textElement);
+        achievementElement.appendChild(personElement);
 
-            achievementsContainer.appendChild(achievementElement);
-        } else {
-            alert('Пожалуйста, заполните все поля.');
-        }
-    });
+        achievementsContainer.appendChild(achievementElement);
+    }
 });

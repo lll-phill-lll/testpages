@@ -1,0 +1,18 @@
+[
+    {
+      "achievement": "Проснулась",
+      "personName": "Дашка",
+      "imageUrl": "data/a1.png"
+    },
+    {
+      "achievement": "Поела",
+      "personName": "Дарич",
+      "imageUrl": "data/a2.png"
+    },
+    {
+        "achievement": "Покаталась на такси",
+        "personName": "Дарья",
+        "imageUrl": "data/a3.png"
+      }
+  ]
+  
