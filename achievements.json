@@ -16,6 +16,24 @@
         "personName": "Дарья",
         "imageUrl": "data/a3.png",
         "description":"Хотела поехать на бизнесе, но приехал К+"
-      }
+      },
+      {
+        "achievement": "Проснулась",
+        "personName": "Дашка",
+        "imageUrl": "data/a1.png",
+        "description":"Встала с кровати вовремя"
+      },
+      {
+        "achievement": "Поела",
+        "personName": "Дарич",
+        "imageUrl": "data/a2.png",
+        "description":"И поела завтрак"
+      },
+      {
+          "achievement": "Покаталась на такси",
+          "personName": "Дарья",
+          "imageUrl": "data/a3.png",
+          "description":"Хотела поехать на бизнесе, но приехал К+"
+        }
   ]
   
