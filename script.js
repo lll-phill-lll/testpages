@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const achievementsContainer = document.getElementById('achievementsContainer');
+    const achievementsContainer = document.getElementByClass('achievementsContainer');
 
     fetch('achievements.json')
         .then(response => response.json())
